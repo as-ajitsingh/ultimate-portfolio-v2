@@ -1,0 +1,36 @@
+
+.terminal-section{
+  width: 35rem;
+  height: 22rem;
+}
+
+.terminal-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  background-color: #454242;
+}
+
+.terminal-header > p {
+  margin: 0;
+  color: #FFFEFE;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.terminal-main{
+  width: 100%;
+  height: calc(100% - 2.5rem);
+  background-color: #4E4D4D;
+  padding: 0.5rem;
+}
+
+.terminal-main > p {
+  font-family: Ubuntu Mono;
+  font-weight: normal;
+  line-height: 120%;
+  font-size: 1rem;
+  margin: 0.25rem;
+  color: #F9F9F9;
+}
