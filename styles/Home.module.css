@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   padding-left: 6rem;
+  z-index: 999;
 }
 
 .logo{
@@ -29,9 +30,13 @@
   align-items: center;
 }
 
+.waves{
+  position: absolute;
+  bottom: -2rem;
+}
+
 .heading{
   text-align: center;
-  /*font-weight: 500;*/
   font-size: 4.5rem;
   margin-top: -6rem;
   margin-bottom: 1rem;
@@ -45,8 +50,8 @@
 }
 
 .second-container {
-  margin-top: 64px;
-  min-height: calc(100vh - 64px);
+  background-color: #000;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 6rem;
@@ -69,8 +74,11 @@
 }
 
 .chatbot-heading{
+  color: white;
   font-size: 4rem;
   font-weight: bold;
+  padding-left: 16px;
+  border-left: #2977EB 4px solid;
 }
 
 .third-container {
@@ -81,9 +89,26 @@
   padding: 0 6rem;
 }
 
+.projects-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  flex-grow: 0.6;
+}
+
 .projects-section-heading{
   font-size: 4rem;
   font-weight: bold;
+}
+
+.project-cards-section{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 @media (max-width: 600px) {
@@ -97,8 +122,17 @@
     font-size: 0.75rem;
   }
 
-  .second-container {
+  .waves{
+    position: absolute;
+    bottom: 0;
+  }
+
+  .second-container, .third-container {
     padding: 0 2rem;
+  }
+  .chatbot-section{
+    margin-top: 64px;
+    min-height: calc(100vh - 64px);
   }
 
   .section-headings{

@@ -2,12 +2,13 @@ import Head from 'next/head'
 import Terminal from '../components/terminal';
 import ProjectCard from '../components/project-card';
 import styles from '../styles/Home.module.css'
+import {getAllProjects} from "./api/projects-service";
 
 export default function Home() {
     return (
         <>
             <nav className={styles.navbar}>
-                <img src="/logo.svg" alt="Ajit Singh logo" className={styles.logo}/>
+                <img src='/logo.svg' alt="Ajit Singh logo" className={styles.logo}/>
             </nav>
             <div id="first-container" className={styles['first-container']}>
                 <Head>
@@ -18,6 +19,7 @@ export default function Home() {
                     <h1 className={styles.heading}>Hi, my name is Ajit.</h1>
                     <p className={styles.subtext}>Wanted to know more, <a href="#second-container">click here</a></p>
                 </main>
+                <img className={styles.waves} src='/waves.svg' alt='waves-border-image'/>
             </div>
             <div id="second-container" className={styles['second-container']}>
                 <section className={styles['chatbot-section']}>
@@ -29,15 +31,7 @@ export default function Home() {
                 <section className={styles['projects-section']}>
                 <h2 className={styles['projects-section-heading']}>personal projects</h2>
                     <section className={styles['project-cards-section']}>
-                        {[{
-                            icon: '/logo.svg',
-                            name: 'Sample Project',
-                            description: 'The Retro App is an open source applicaiton developed by a bunch on enthusiatic developers (Bored Engineers) in order to provide a solution to online Retrospective Meetings. To use this application you can navigate to https://theretroapp.com',
-                            weblink: 'https://theretroapp.com',
-                            links: {
-                                github: 'https://github.com/bored-engineers/the-retro-app'
-                            }
-                        }].map(ProjectCard)}
+                        {getAllProjects().map(ProjectCard)}
                     </section>
                 </section>
             </div>

@@ -1,19 +1,34 @@
 import styles from './project-card.module.css';
 
 const getLink = (iconType, url) => {
-    switch (iconType){
-        case 'github': return <a key={url} href={url}><img src='/github.svg'/></a>;
+    switch (iconType) {
+        case 'github':
+            return <a className={styles['social-link']} key={url} href={url} target='_blank'>
+                <img className={styles['github-image']} src='/github-icon.svg'/>
+            </a>;
+        case 'video':
+            return <a className={styles['social-link']} key={url} href={url} target='_blank'>
+                <img className={styles['video-image']} src='/video-icon.svg'/>
+            </a>;
+        case 'website':
+            return <a className={styles['social-link']} key={url} href={url} target='_blank'>
+                <img className={styles['article-image']} src='/website-icon.svg'/>
+            </a>;
+        case 'article':
+            return <a className={styles['social-link']} key={url} href={url} target='_blank'>
+                <img className={styles['website-image']} src='/article-icon.svg'/>
+            </a>;
     }
 }
 
 export default function ({icon, name, description, weblink, links}) {
     return (
         <div key={name} className={styles['project-card']}>
-            <img src={icon}/>
-            <heading>{name}</heading>
+            <img className={styles['project-icon']} src={icon} alt="project icon"/>
+            <header>{name}</header>
             <p>{description}</p>
-            {Object.entries(links).map(([key,value]) => getLink(key, value))}
-            <a href={weblink}><img src='/weblink.svg'/></a>
+            <div
+                className={styles['social-links']}> {Object.entries(links).map(([key, value]) => getLink(key, value))}</div>
         </div>
     );
 }
