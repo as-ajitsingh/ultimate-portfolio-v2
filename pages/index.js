@@ -3,6 +3,7 @@ import Terminal from '../components/terminal';
 import ProjectCard from '../components/project-card';
 import styles from '../styles/Home.module.css'
 import {getAllProjects} from "./api/projects-service";
+import SkillsChart from "../components/skills-chart/skills-chart";
 
 export default function Home() {
     return (
@@ -33,6 +34,12 @@ export default function Home() {
                     <section className={styles['project-cards-section']}>
                         {getAllProjects().map(ProjectCard)}
                     </section>
+                </section>
+            </div>
+            <div id="fourth-container" className={styles['third-container']}>
+                <section className={styles['skills-section']}>
+                    <h2 className={styles['projects-section-heading']}>technical skills</h2>
+                    <SkillsChart/>
                 </section>
             </div>
 

@@ -111,6 +111,18 @@
   justify-content: space-between;
 }
 
+.fourth-container {
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem;
+}
+
+.skills-section{
+height: 100%;
+}
+
 @media (max-width: 600px) {
   .navbar{
     padding-left: 2rem;
@@ -138,9 +150,5 @@
   .section-headings{
     font-size: 2rem;
   }
-  .skills-and-more-section{
-    margin-top: 0;
-  }
-
 
 }
