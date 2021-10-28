@@ -13,7 +13,7 @@ export default function Home() {
             </nav>
             <div id="first-container" className={styles['first-container']}>
                 <Head>
-                    <title>Create Next App</title>
+                    <title>Ajit Singh</title>
                     <link rel="icon" href="/favicon.ico"/>
                 </Head>
                 <main className={styles.main}>

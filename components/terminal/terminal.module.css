@@ -23,8 +23,9 @@
 
 .terminal-main{
   width: 100%;
-  height: calc(100% - 2.5rem);
+  height: calc(100% - 2.7rem);
   padding: 0.5rem;
+  overflow-y: auto;
 }
 
 .terminal-main > p {
@@ -41,9 +42,13 @@
 }
 
 .input-box, .input-box:focus-visible{
+  font-family: Ubuntu Mono;
   background: none;
   border: none;
   outline: none;
   color: white;
+  font-weight: normal;
+  line-height: 120%;
+  font-size: 1rem;
 }
 
