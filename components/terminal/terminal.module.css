@@ -50,5 +50,6 @@
   font-weight: normal;
   line-height: 120%;
   font-size: 1rem;
+  width: calc(100% - 1rem);
 }
 
