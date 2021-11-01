@@ -1,3 +1,7 @@
 .chart-container{
     height: 100%;
 }
+
+.chart-radar{
+    height: calc(100vh - 30rem);
+}

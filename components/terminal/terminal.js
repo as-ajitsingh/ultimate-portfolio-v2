@@ -7,6 +7,7 @@ export default () => {
     const elementRef = useRef();
     const [chats, setChats] = useState([]);
     const [currentInput, setCurrentInput] = useState('');
+    const [isInputEditable, setIsInputEditable] = useState(true);
 
     useEffect(() => {
         if (chats.length !== 0)
@@ -15,7 +16,10 @@ export default () => {
 
     const inputHandler = async (key, value) => {
         if (key === 'Enter' && value) {
+            setIsInputEditable(false);
             const response = await sendMessage(value);
+            setIsInputEditable(true);
+            document.getElementById('inputBox').focus()
             setChats([...chats, {question: value.trim(), answer: response.text}])
             setCurrentInput('');
         }
@@ -38,6 +42,7 @@ export default () => {
                 <p>
                     <span className={styles['prompt-text']}>$ </span>
                     <input id='inputBox'
+                           disabled={!isInputEditable}
                            className={styles['input-box']}
                            onKeyUp={({key, target: {value}}) => inputHandler(key, value)}
                            ref={elementRef}

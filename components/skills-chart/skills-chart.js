@@ -1,67 +1,47 @@
-import Highcharts from 'highcharts'
-import HC_More from 'highcharts/highcharts-more'
-import HighchartsReact from 'highcharts-react-official'
+import {Radar} from 'react-chartjs-2';
 import styles from './skill-chart.module.css';
 
-if (typeof Highcharts === 'object') {
-    HC_More(Highcharts)
+const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            display: false
+        }
+    },
+    scaleShowLabels: false,
+    scale: {
+        display: false
+    },
+    scales: {
+        r: {
+            ticks: {
+                display: false
+            },
+            angleLines: {
+                display: true
+            },
+            suggestedMin: 0,
+            suggestedMax: 10
+        }
+    }
 }
 
-const options = {
-    chart: {
-        polar: true,
-        type: 'area',
-        backgroundColor: '#F5F4F4',
-        // height: '100%'
-    },
-    legend: {
-        enabled: false
-    },
-
-    title: {
-        text: '',
-        x: 0
-    },
-
-    pane: {
-        // size: '80%'
-    },
-
-    xAxis: {
-        categories: ['NodeJs', 'Javascript', 'HTML', 'CSS',
-            'Ethereum', 'React'],
-        tickmarkPlacement: 'on',
-        lineWidth: 0
-    },
-
-    yAxis: {
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
-        min: 0,
-        labels: false
-    },
-    series: [{
-        name: 'Expertise Level',
+const data = {
+    labels: ['NodeJs', 'Javascript', 'HTML', 'CSS', 'Ethereum', 'React'],
+    datasets: [{
         data: [8, 8, 7, 5, 3, 8],
-        pointPlacement: 'on'
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                pane: {
-                    size: '100%'
-                }
-            }
-        }]
-    }
-
+        fill: true,
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgb(255, 99, 132)',
+        pointBackgroundColor: 'rgb(255, 99, 132)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgb(255, 99, 132)'
+    }]
 };
 
 const SkillsChart = () => <div className={styles['chart-container']}>
-    <HighchartsReact containerProps={{ style: { height: "100%" } }} highcharts={Highcharts} options={options}/>
+    <Radar className={styles['chart-radar']} data={data} options={options}/>
 </div>
 export default SkillsChart;
