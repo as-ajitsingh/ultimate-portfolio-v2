@@ -22,6 +22,19 @@ export default () => {
             document.getElementById('inputBox').focus()
             setChats([...chats, {question: value.trim(), answer: response.text}])
             setCurrentInput('');
+            if (response.type === 'ACTION') {
+                const [actionType, actionTarget] = response.action.split('#.$');
+                if (actionType === 'SCROLL') {
+                    setTimeout(() => {
+                        window.location.href = `#${actionTarget}`
+                    }, 2000);
+                } else if (actionType === 'URLOPEN') {
+                    setTimeout(() => {
+                        window.open(actionTarget, '_blank');
+                    }, 2000);
+                }
+            }
+
         }
     }
 
@@ -48,6 +61,7 @@ export default () => {
                            ref={elementRef}
                            value={currentInput}
                            onChange={({target: {value}}) => setCurrentInput(value)}
+                           autoComplete="off"
                     />
                 </p>
             </div>
