@@ -2,6 +2,7 @@
   "name": "ultimate-portfolio-v2",
   "version": "2.0.0",
   "private": true,
+  "homepage": "https://as-ajitsingh.github.io/ultimate-portfolio-v2/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
