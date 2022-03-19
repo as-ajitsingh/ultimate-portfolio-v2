@@ -195,4 +195,8 @@
   .section-headings{
     font-size: 2rem;
   }
+
+  .project-cards-section{
+    justify-content: center;
+  }
 }
