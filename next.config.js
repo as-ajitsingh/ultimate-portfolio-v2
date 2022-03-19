@@ -1,8 +1,11 @@
 const basePath = `/${require('./package.json').name}`;
 
-const skipBasePathEnvironments = ['development', 'production'];
+const skipBasePathNodeEnvironments = ['development', 'production'];
+const basePathAppEnvironments = ['github-pages'];
 
-module.exports = skipBasePathEnvironments.includes(process.env.NODE_ENV) ? {} : {
-    basePath: basePath,
-    assetPrefix: basePath
-};
+module.exports = skipBasePathNodeEnvironments.includes(process.env.NODE_ENV) && !basePathAppEnvironments.includes(process.env.APP_ENV)
+    ? {}
+    : {
+        basePath: basePath,
+        assetPrefix: basePath
+    };
