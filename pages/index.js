@@ -38,12 +38,12 @@ export default function Home() {
                     </section>
                 </section>
             </div>
-            <div id="skills" className={styles['fourth-container']}>
+            {/* <div id="skills" className={styles['fourth-container']}>
                 <section className={styles['skills-section']}>
                     <h2 className={styles['section-heading']}>technical skills</h2>
                     <SkillsChart/>
                 </section>
-            </div>
+            </div> */}
             <div id="contact" className={styles['fifth-container']}>
                 <section className={styles['contact-section']}>
                     <ContactForm/>
