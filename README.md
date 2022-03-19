@@ -21,3 +21,6 @@ Using github action for the deployment of the code, the process of build and dep
 3. Pushing the deployed code using credentials in the github repo to the firebase webapp.
 
 
+Firebase deployment
+
+
