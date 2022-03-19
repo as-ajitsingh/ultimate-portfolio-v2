@@ -12,7 +12,7 @@ const ContactForm = () => {
                 <a href='https://www.linkedin.com/in/as-ajitsingh' target='_blank'><img src='images/linkedin-icon.svg' alt='twitter logo' /></a>
             </div>
             {shouldShowEmail && <div className={styles['display-email']}>
-                <p>In case default email app didn't open, here is my email: <b>developer.ajitsingh@gmail.com</b></p>
+                <p>In case default email app didn't open, here is my email: <b>ajitsingh.developer@gmail.com</b></p>
             </div>}
         </div>
     )
