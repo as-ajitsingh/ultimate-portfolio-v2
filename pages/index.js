@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css'
 import {getAllProjects} from "./api/projects-service";
 import SkillsChart from "../components/skills-chart/skills-chart";
 import ContactForm from "../components/contact-form/contact-form";
-import packageJson from "../package.json";
 
 export default function Home() {
     return (
