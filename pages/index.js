@@ -3,25 +3,26 @@ import Terminal from '../components/terminal';
 import ProjectCard from '../components/project-card';
 import styles from '../styles/Home.module.css'
 import {getAllProjects} from "./api/projects-service";
-import SkillsChart from "../components/skills-chart/skills-chart";
+// import SkillsChart from "../components/skills-chart/skills-chart";
 import ContactForm from "../components/contact-form/contact-form";
 
 export default function Home() {
     return (
         <>
             <nav className={styles.navbar}>
-                <img src='/logo.svg' alt="Ajit Singh logo" className={styles.logo}/>
+                <img src='images/logo.svg' alt="Ajit Singh logo" className={styles.logo}/>
             </nav>
             <div id="main" className={styles['first-container']}>
                 <Head>
                     <title>Ajit Singh</title>
-                    <link rel="icon" href="/favicon.ico"/>
+                    <link rel="icon" href="images/favicon.ico"/>
+                    {/* <base href={`/${packageJson.name}/`}/> */}
                 </Head>
                 <main className={styles.main}>
                     <h1 className={styles.heading}>Hi, my name is Ajit.</h1>
                     <p className={styles.subtext}>Wanted to know more, <a href="#chatbot">click here</a></p>
                 </main>
-                <img className={styles.waves} src='/waves2.svg' alt='waves-border-image'/>
+                <img className={styles.waves} src='images/waves2.svg' alt='waves-border-image'/>
             </div>
             <div id="chatbot" className={styles['second-container']}>
                 <section className={styles['chatbot-section']}>
@@ -37,12 +38,12 @@ export default function Home() {
                     </section>
                 </section>
             </div>
-            <div id="skills" className={styles['fourth-container']}>
+            {/* <div id="skills" className={styles['fourth-container']}>
                 <section className={styles['skills-section']}>
                     <h2 className={styles['section-heading']}>technical skills</h2>
                     <SkillsChart/>
                 </section>
-            </div>
+            </div> */}
             <div id="contact" className={styles['fifth-container']}>
                 <section className={styles['contact-section']}>
                     <ContactForm/>

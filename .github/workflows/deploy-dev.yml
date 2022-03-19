@@ -10,20 +10,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+       APP_ENV: github-pages
 
     strategy:
       matrix:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: borales/actions-yarn@v2.3.0
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Yarn Install
+      uses: borales/actions-yarn@v2.3.0
       with:
-        cmd: install
-    - uses: borales/actions-yarn@v2.3.0
+        cmd: install       
+    - name: Build
+      uses: borales/actions-yarn@v2.3.0
       with:
         cmd: build
-    - uses: borales/actions-yarn@v2.3.0
+    - name: Export
+      uses: borales/actions-yarn@v2.3.0
       with:
         cmd: export
     - name: Deploy 🚀

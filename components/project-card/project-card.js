@@ -4,19 +4,19 @@ const getLink = (iconType, url) => {
     switch (iconType) {
         case 'github':
             return <a className={styles['social-link']} key={url} href={url} target='_blank'>
-                <img className={styles['github-image']} src='/github-icon.svg'/>
+                <img className={styles['github-image']} src='images/github-icon.svg'/>
             </a>;
         case 'video':
             return <a className={styles['social-link']} key={url} href={url} target='_blank'>
-                <img className={styles['video-image']} src='/video-icon.svg'/>
+                <img className={styles['video-image']} src='images/video-icon.svg'/>
             </a>;
         case 'website':
             return <a className={styles['social-link']} key={url} href={url} target='_blank'>
-                <img className={styles['article-image']} src='/website-icon.svg'/>
+                <img className={styles['article-image']} src='images/website-icon.svg'/>
             </a>;
         case 'article':
             return <a className={styles['social-link']} key={url} href={url} target='_blank'>
-                <img className={styles['website-image']} src='/article-icon.svg'/>
+                <img className={styles['website-image']} src='images/article-icon.svg'/>
             </a>;
     }
 }

@@ -10,7 +10,7 @@ export const getAllProjects = () => (
             }
         },
         {
-            icon: '/no-icon-1.svg',
+            icon: 'images/no-icon-1.svg',
             name: 'Nodlex',
             description: 'Nodlex is a CLI tool that can generate boilerplate code for Alexa Skill Developement. Nodlex generates boilerplate code based on the repository alexa-nodejs-boilerplate, for more details on how to use this boiler plate follow the link. Nodlex also provides functionality to Add Intent from CLI itself. So no overhead of writing basic code everytime you add a new intent to your skill.',
             links: {
@@ -19,7 +19,7 @@ export const getAllProjects = () => (
             }
         },
         {
-            icon: '/bucketed-icon.svg',
+            icon: 'images/bucketed-icon.svg',
             name: 'Bucketed',
             description: 'Bucketed allows a simple and elegant way of deploying your static websites to cloud storage/bucket providers. As many of the cloud providers give the facility of hosting a static website through cloud storages such as Google Cloud Storage, AWS S3 etc. You can also integrate Bucketed with your CD tool for autonomous deployment of your site generated through Angular, React etc.',
             links: {
@@ -28,7 +28,7 @@ export const getAllProjects = () => (
             }
         },
         {
-            icon: '/media-icon.svg',
+            icon: 'images/media-icon.svg',
             name: 'MAPS',
             description: 'MAPS stands for Media Anti Piracy System. MAPS uses technologies such as EME-Encrypted Media Extention and Blockchain - Public Ethereum Network to minimize the losses that occur due to Piracy.',
             links: {
@@ -37,7 +37,7 @@ export const getAllProjects = () => (
             }
         },
         {
-            icon: '/book-icon.svg',
+            icon: 'images/book-icon.svg',
             name: 'Bedside Kindle',
             description: 'Converting Kindle E-Reader into Bedside Clock, IOT Button and TO-DO List Display at same time.',
             weblink: 'https://theretroapp.com',
