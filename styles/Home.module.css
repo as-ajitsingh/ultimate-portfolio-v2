@@ -104,6 +104,8 @@
 .section-heading {
   font-size: 4rem;
   font-weight: bold;
+  padding-left: 16px;
+  border-left: black 4px solid;
 }
 
 .project-cards-section{

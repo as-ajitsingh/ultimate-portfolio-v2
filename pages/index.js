@@ -3,7 +3,7 @@ import Terminal from '../components/terminal';
 import ProjectCard from '../components/project-card';
 import styles from '../styles/Home.module.css'
 import {getAllProjects} from "./api/projects-service";
-import SkillsChart from "../components/skills-chart/skills-chart";
+// import SkillsChart from "../components/skills-chart/skills-chart";
 import ContactForm from "../components/contact-form/contact-form";
 
 export default function Home() {
