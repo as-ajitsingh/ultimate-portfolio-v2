@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Blogs by Ajit Singh</title>
+        <link>https://blogs.ajitsingh.me</link>
+        <description>Some tech stuff</description>
+        <lastBuildDate>Sun, 20 Mar 2022 13:23:51 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Dynamically generating code using AST]]></title>
+            <link>https://blogs.ajitsingh.me/posts/dynamically-generating-code-using-ast</link>
+            <guid>dynamically-generating-code-using-ast</guid>
+            <pubDate>Sun, 18 Jul 2021 19:05:07 GMT</pubDate>
+            <author>ajitsingh.developer@gmail.com (Ajit Singh)</author>
+            <enclosure url="https://storage.googleapis.com/ultimate-portfolio-v2.appspot.com/blogs/2021/07/dynamically-generating-code-using-ast.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Creating your very own custom ESLint plugin]]></title>
+            <link>https://blogs.ajitsingh.me/posts/writing-custom-es-lint-rules</link>
+            <guid>writing-custom-es-lint-rules</guid>
+            <pubDate>Sun, 23 May 2021 15:35:09 GMT</pubDate>
+            <author>ajitsingh.developer@gmail.com (Ajit Singh)</author>
+            <enclosure url="https://storage.googleapis.com/ultimate-portfolio-v2.appspot.com/blogs/2021/05/writing-eslint-plugin.jpg" length="0" type="image/jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Writing a Python Slayer in Javascript using AST]]></title>
+            <link>https://blogs.ajitsingh.me/posts/python-slayer-in-javascript-using-ast</link>
+            <guid>python-slayer-in-javascript-using-ast</guid>
+            <pubDate>Sat, 22 May 2021 12:13:35 GMT</pubDate>
+            <author>ajitsingh.developer@gmail.com (Ajit Singh)</author>
+            <enclosure url="https://storage.googleapis.com/ultimate-portfolio-v2.appspot.com/blogs/2021/05/Python-Slayer-in-Javascript-using-AST.jpeg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[Into the world of Abstract Syntax Tree]]></title>
+            <link>https://blogs.ajitsingh.me/posts/into-the-world-of-abstract-syntax-tree</link>
+            <guid>into-the-world-of-abstract-syntax-tree</guid>
+            <pubDate>Sat, 22 May 2021 11:49:04 GMT</pubDate>
+            <author>ajitsingh.developer@gmail.com (Ajit Singh)</author>
+            <enclosure url="https://storage.googleapis.com/ultimate-portfolio-v2.appspot.com/blogs/2021/05/into-the-world-of-ast.jpeg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[The Genesis Blog: How I built this blogging site]]></title>
+            <link>https://blogs.ajitsingh.me/posts/the-genesis-blog</link>
+            <guid>the-genesis-blog</guid>
+            <pubDate>Wed, 05 May 2021 20:34:48 GMT</pubDate>
+            <author>ajitsingh.developer@gmail.com (Ajit Singh)</author>
+            <enclosure url="https://storage.googleapis.com/ultimate-portfolio-v2.appspot.com/blogs/2021/05/brett-jordan-E1por_SGvJE-unsplash--1-.jpg" length="0" type="image/jpg"/>
+        </item>
+    </channel>
+</rss>
