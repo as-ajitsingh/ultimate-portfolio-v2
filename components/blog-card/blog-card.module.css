@@ -27,6 +27,13 @@
 .card-link {
     text-decoration: none;
     border-bottom: none;
+    margin: 4px;
+}
+
+.card-link:hover{
+    border: 2px solid #433d3d;
+    box-sizing: border-box;
+    margin: auto auto;
 }
 
 .project-card p {
