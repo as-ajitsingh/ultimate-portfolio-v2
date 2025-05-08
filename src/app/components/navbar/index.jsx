@@ -1,15 +1,27 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "../logo/logo";
 
 const Navbar = ({ websiteTitle, links }) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const updateScrollProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / docHeight) * 100;
+      setProgress(scrolled);
+    };
+
+    window.addEventListener("scroll", updateScrollProgress);
+    return () => window.removeEventListener("scroll", updateScrollProgress);
+  }, []);
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
-
-    console.log(sections, navLinks);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,28 +46,39 @@ const Navbar = ({ websiteTitle, links }) => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between h-20 w-full md:px-32 px-4 fixed bg-white z-999">
-      <Link href="/">
-        <span className="flex items-center space-x-4">
-          <Logo />
-          <span className="text-2xl border-primary-500 dark:border-secondary-500 border-l-2 pl-4">
-            {websiteTitle}
+    <>
+      <nav
+        className="flex items-center justify-between h-20 w-full md:px-32 px-4 fixed bg-white z-999"
+        style={{ borderBottom: 0 }}
+      >
+        <Link href="/">
+          <span className="flex items-center space-x-4">
+            <Logo />
+            <span className="text-2xl border-primary-500 dark:border-secondary-500 border-l-2 pl-4">
+              {websiteTitle}
+            </span>
           </span>
-        </span>
-      </Link>
-      <div className="flex gap-12">
-        {links.map((link) => (
-          <Link
-            data-section={link.text}
-            key={link.text}
-            className="nav-link uppercase text-primary-100 hover:text-primary-300"
-            href={link.url}
-          >
-            {link.text}
-          </Link>
-        ))}
+        </Link>
+        <div className="flex gap-12">
+          {links.map((link) => (
+            <Link
+              data-section={link.text}
+              key={link.text}
+              className="nav-link uppercase text-primary-100 hover:text-primary-300"
+              href={link.url}
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
+      </nav>
+      <div className="fixed w-full h-10 mt-20 z-100 flex justify-center">
+        <div
+          className="bottom-0 left-1/2 h-0.5 bg-secondary-700 transform transition-all duration-100 ease-linear "
+          style={{ width: `${progress}%` }}
+        />
       </div>
-    </nav>
+    </>
   );
 };
 
