@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @import "tailwindcss";
 
 :root {
@@ -12,8 +13,8 @@
   --color-primary-100: #808080;
   --color-primary-300: #333333;
   --color-primary-500: #000000;
-  
-  --color-secondary-700: #E7E6E6;
+
+  --color-secondary-700: #e7e6e6;
 
   --color-accent-300: #5492ef;
 
@@ -24,20 +25,31 @@
 @layer utilities {
   .text-display-02-normal {
     font-weight: 400;
-    font-size: 64px;
-    line-height: 80px;
+    font-size: 4rem;
+    line-height: 5rem;
   }
 
   .text-body-01-normal {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+
+  .text-body-02-normal {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
   }
 
   .text-heading-01-normal {
     font-weight: 400;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .text-heading-04-bold {
+    font-weight: bold;
+    font-size: 1.25rem;
   }
 
   .max-w-75r {
@@ -45,8 +57,13 @@
   }
 }
 
+html {
+  font-size: 0.9vw;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Nunito", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }

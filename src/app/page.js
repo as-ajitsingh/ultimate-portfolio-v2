@@ -1,6 +1,10 @@
 import Image from "next/image";
+import CtaAvatar from "./components/cta-avatar";
+import Card from "./components/card";
 
 export default function Home() {
+  const projects = ["Nodlex", "The Retro App", "Maps", "Bucketed"];
+
   return (
     <>
       <section
@@ -15,9 +19,7 @@ export default function Home() {
             want to know more, <a className="text-accent-300">scroll</a>.
           </p>
         </div>
-        <div id="right">
-          <img src="./cta-avatar.png" />
-        </div>
+        <CtaAvatar />
       </section>
       <section id="about" className="h-dvh content-center flex relative">
         <div
@@ -29,7 +31,10 @@ export default function Home() {
           </div>
         </div>
         <div className="relative z-10 mt-35 flex flex-col items-center gap-20">
-          <h1 className="text-heading-01-normal">About Me</h1>
+          <h1 className="text-heading-01-normal">
+            About Me
+            <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
+          </h1>
           <p className="text-primary-100 text-body-01-normal text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus magna
             nunc vel sagittis quis. Ultrices elit augue cras in id. Iaculis quis
@@ -42,7 +47,31 @@ export default function Home() {
       <section
         id="projects"
         className="h-dvh content-center flex items-center justify-between"
-      ></section>
+      >
+        <h1 className="text-heading-01-normal">
+          Projects
+          <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
+        </h1>
+        <div className="flex items-center justify-center">
+          <div className="h-140 flex items-center relative bg-secondary-700 px-20 rounded-md">
+            <div className="grid grid-cols-2 gap-6">
+              {projects.map((title, idx) => (
+                <Card key={idx} title={title} />
+              ))}
+            </div>
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  className={`w-3 h-3 rounded-full ${
+                    i === 1 ? "bg-blue-500" : "bg-gray-400"
+                  }`}
+                ></div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="blogs"
         className="h-dvh content-center flex relative"
