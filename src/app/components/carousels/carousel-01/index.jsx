@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Card from "../../card";
 import { FaPlay } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Carousel01 = ({}) => {
   const projects = [
@@ -28,7 +29,7 @@ const Carousel01 = ({}) => {
   const [sliderPaused, setSliderPaused] = useState(false);
 
   useEffect(() => {
-    const sliderDuration = 3_000;
+    const sliderDuration = 5_000;
     if (!sliderPaused)
       sliderTimerRef.current = setInterval(() => {
         setCurrentPage((currentPage) =>
@@ -43,8 +44,16 @@ const Carousel01 = ({}) => {
     <>
       <div className="h-140 flex items-center relative bg-secondary-700 px-20 rounded-md">
         <div className="grid grid-cols-2 gap-6">
-          {projectPages[currentPage].map((title, idx) => (
-            <Card key={idx} title={title} />
+          {projectPages[currentPage].map((title, i) => (
+              <motion.div
+                key={title}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ delay: i* 0.2, duration: 0.7 }}
+              >
+                <Card key={title} title={title} />
+              </motion.div>
           ))}
         </div>
         <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 items-center">
