@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Card from "../../card";
+import Card from "../../cards/card";
 import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -42,7 +42,7 @@ const Carousel01 = ({}) => {
 
   return (
     <>
-      <div className="h-140 flex items-center relative bg-secondary-700 px-20 rounded-md">
+      <div className="h-140 flex items-center relative bg-secondary-700 px-20">
         <div className="grid grid-cols-2 gap-6">
           {projectPages[currentPage].map((title, i) => (
               <motion.div

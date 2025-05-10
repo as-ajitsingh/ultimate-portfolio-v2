@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "../logo/logo";
 
-
 const Navbar = ({ websiteTitle, links }) => {
   const [progress, setProgress] = useState(0);
 
@@ -13,11 +12,12 @@ const Navbar = ({ websiteTitle, links }) => {
       const scrollTop = window.scrollY;
       const docHeight = document.body.scrollHeight - window.innerHeight;
       const scrolled = (scrollTop / docHeight) * 100;
+      console.log({ scrollTop, docHeight, scrolled, s: scrollTop / docHeight });
       return scrolled;
     };
 
     setProgress(getCurrentScrollProgress());
-    
+
     const updateScrollProgress = () => {
       setProgress(getCurrentScrollProgress());
     };
@@ -81,7 +81,7 @@ const Navbar = ({ websiteTitle, links }) => {
       </nav>
       <div className="fixed w-full h-10 mt-20 z-999 flex justify-center">
         <div
-          className="bottom-0 left-1/2 h-0.5 bg-secondary-700 transform transition-all duration-100 ease-linear "
+          className="bottom-0 left-1/2 h-0.5 bg-primary-500 transform transition-all duration-100 ease-linear "
           style={{ width: `${progress}%` }}
         />
       </div>
