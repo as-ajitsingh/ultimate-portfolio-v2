@@ -1,10 +1,9 @@
 import Image from "next/image";
 import CtaAvatar from "./components/cta-avatar";
 import Card from "./components/card";
+import Carousel01 from './components/carousels/carousel-01';
 
 export default function Home() {
-  const projects = ["Nodlex", "The Retro App", "Maps", "Bucketed"];
-
   return (
     <>
       <section
@@ -53,23 +52,7 @@ export default function Home() {
           <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
         </h1>
         <div className="flex items-center justify-center">
-          <div className="h-140 flex items-center relative bg-secondary-700 px-20 rounded-md">
-            <div className="grid grid-cols-2 gap-6">
-              {projects.map((title, idx) => (
-                <Card key={idx} title={title} />
-              ))}
-            </div>
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2">
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  className={`w-3 h-3 rounded-full ${
-                    i === 1 ? "bg-blue-500" : "bg-gray-400"
-                  }`}
-                ></div>
-              ))}
-            </div>
-          </div>
+         <Carousel01 />
         </div>
       </section>
       <section
