@@ -11,7 +11,11 @@ const Intro = () => {
           Hi, My name is Ajit and I am a Software Developer.
         </p>
         <p className="text-body-01-normal text-primary-100 mt-5">
-          want to know more, <a href='#about' className="text-accent-300">scroll</a>.
+          want to know more,{" "}
+          <a href="#about" className="text-accent-300">
+            scroll
+          </a>
+          .
         </p>
       </div>
       <CtaAvatar />
