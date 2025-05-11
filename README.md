@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ultimate Portfolio V2
 
-## Getting Started
+## Description
 
-First, run the development server:
+This is a personal portfolio website built with Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Version
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+0.1.0
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   `dev`: Runs the development server using Next.js with Turbopack.
+-   `build`: Builds the application for production.
+-   `start`: Starts the Next.js production server.
+-   `lint`: Runs the linter.
 
-## Learn More
+## Dependencies
 
-To learn more about Next.js, take a look at the following resources:
+-   `classnames`: "^2.5.1"
+-   `framer-motion`: "12.10.5"
+-   `next`: "15.3.2"
+-   `react`: "^19.0.0"
+-   `react-dom`: "^19.0.0"
+-   `react-icons`: "^5.5.0"
+-   `rss-to-json`: "^2.1.1"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dev Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-   `@eslint/eslintrc`: "^3"
+-   `@tailwindcss/postcss`: "^4"
+-   `eslint`: "^9"
+-   `eslint-config-next`: "15.3.2"
+-   `tailwindcss`: "^4"
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   `public/`: Contains static assets such as images and fonts.
+-   `src/`: Contains the application source code.
+    -   `app/`: Contains the Next.js application routes and components.
+    -   `components/`: Contains reusable React components.
+    -   `services/`: Contains services for fetching data.

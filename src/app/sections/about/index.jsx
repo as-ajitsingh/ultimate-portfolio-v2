@@ -20,7 +20,7 @@ const AboutMe = () => {
           orci montes, ultricies pretium non pharetra. Bibendum a hendrerit
           donec vitae molestie senectus amet.
         </p>
-        <img src="chatbot.png" />
+        <img className='w-180' src="undermaintenance-chatbot.png" />
       </div>
     </section>
   );
