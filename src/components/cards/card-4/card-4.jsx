@@ -18,6 +18,7 @@ const Card4 = ({
   return (
     <Link
       href={link}
+      target='_blank'
       className={cl(
         "w-88 h-48 flex overflow-hidden border bg-secondary-500",
         styles
@@ -26,16 +27,17 @@ const Card4 = ({
       <div id="textArea" className="min-w-48 w-48 p-3 flex flex-col gap-3">
         <div className="flex space-x-2 text-xs text-primary-100">
           <UIDate date={new Date(date)} />
-          <ReadTime readTime={readTime} />
+          {/** Todo: uncomment once rss support readtime and tags */}
+          {/* <ReadTime readTime={readTime} /> */}
         </div>
         <div className="text-base line-clamp-3">{text}</div>
-        <div id="tags" className="flex gap-x-4 gap-y-2 flex-wrap">
+        {/* <div id="tags" className="flex gap-x-4 gap-y-2 flex-wrap">
           {tags.map((tag) => {
             return (
               <Tag key={tag} variant="small" text={tag} />
             );
           })}
-        </div>
+        </div> */}
       </div>
       <Image
         className="w-96 h-48"

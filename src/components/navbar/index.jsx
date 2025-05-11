@@ -12,7 +12,6 @@ const Navbar = ({ websiteTitle, links }) => {
       const scrollTop = window.scrollY;
       const docHeight = document.body.scrollHeight - window.innerHeight;
       const scrolled = (scrollTop / docHeight) * 100;
-      console.log({ scrollTop, docHeight, scrolled, s: scrollTop / docHeight });
       return scrolled;
     };
 
