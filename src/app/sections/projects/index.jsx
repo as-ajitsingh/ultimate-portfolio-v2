@@ -1,17 +1,21 @@
+import projects from "@/app/data/projects";
 import Card from "@/components/cards/card";
 import Carousel01 from "@/components/carousels/carousel-01";
 
 const Projects = () => {
-  const projects = [
-    "Nodlex",
-    "The Retro App",
-    "Maps",
-    "Bucketed",
-    "Node",
-    "Curlt",
-  ];
-
-  const projectCards = projects.map((title) => <Card key={title} title={title} />);
+  const projectCards = projects.map(
+    ({ name, description, video, github, link, opensource }) => (
+      <Card
+        key={name}
+        name={name}
+        description={description}
+        video={video}
+        github={github}
+        link={link}
+        opensource={opensource}
+      />
+    )
+  );
 
   return (
     <section
