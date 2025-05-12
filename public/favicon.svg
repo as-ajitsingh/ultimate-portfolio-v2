@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="24" height="24"><svg width="24" height="24" viewBox="0 0 24 24" fill="blue" xmlns="http://www.w3.org/2000/svg">
+    <g id="SvgjsG1009">
+      <rect id="SvgjsRect1008" x="6" y="5.3334" width="3" height="13.3333" fill="#333333"></rect>
+      <rect id="SvgjsRect1007" width="3" height="24" fill="#333333"></rect>
+      <rect id="SvgjsRect1006" x="15" y="5.3334" width="3" height="13.3333" fill="#333333"></rect>
+      <rect id="SvgjsRect1005" x="21" y="2.66672" width="3" height="16" fill="#333333"></rect>
+      <rect id="SvgjsRect1004" x="15" y="5.3334" width="2.66667" height="6" transform="rotate(90 15 5.3334)" fill="#333333"></rect>
+      <rect id="SvgjsRect1003" x="15" y="10.6668" width="2.66667" height="6" transform="rotate(90 15 10.6668)" fill="#333333"></rect>
+      <rect id="SvgjsRect1002" x="24" y="21.3333" width="2.66667" height="21" transform="rotate(90 24 21.3333)" fill="#333333"></rect>
+      <rect id="SvgjsRect1001" x="24" width="2.66667" height="21" transform="rotate(90 24 0)" fill="#333333"></rect>
+      <rect id="SvgjsRect1000" x="21" y="15.9999" width="2.66667" height="3" transform="rotate(90 21 15.9999)" fill="#333333"></rect>
+    </g>
+  </svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
