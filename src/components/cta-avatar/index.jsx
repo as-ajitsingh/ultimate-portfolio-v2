@@ -1,5 +1,5 @@
-"use client";
-import { useRef, useEffect } from "react";
+'use client';
+import { useRef, useEffect } from 'react';
 
 const CtaAvatar = () => {
   const videoRef = useRef();
@@ -10,7 +10,7 @@ const CtaAvatar = () => {
     }
 
     const observer = new IntersectionObserver(
-      ([entry]) => {  
+      ([entry]) => {
         if (entry.isIntersecting) {
           videoRef.current.currentTime = 0;
           videoRef.current.play();
@@ -32,19 +32,8 @@ const CtaAvatar = () => {
   };
 
   return (
-    <div
-      id="right"
-      onClick={onVideoClick}
-      className="rounded-full w-2/5 border-primary-300 border-4 shadow-lg"
-    >
-      <video
-        className="rounded-full w-3/2"
-        ref={videoRef}
-        src="cta-avatar.webm"
-        autoPlay
-        muted
-        playsInline
-      />
+    <div id="right" onClick={onVideoClick} className="rounded-full w-2/5 border-primary-300 border-4 shadow-lg">
+      <video className="rounded-full w-3/2" ref={videoRef} src="cta-avatar.webm" autoPlay muted playsInline />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-"use client";
-import { getAllBlogs } from "@/app/services/blogs.service";
-import Card4 from "@/components/cards/card-4/card-4";
-import { useEffect, useState } from "react";
+'use client';
+import { getAllBlogs } from '@/app/services/blogs.service';
+import Card4 from '@/components/cards/card-4/card-4';
+import { useEffect, useState } from 'react';
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -11,10 +11,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <section
-      id="blogs"
-      className="h-dvh flex flex-col items-center justify-around relative"
-    >
+    <section id="blogs" className="h-dvh flex flex-col items-center justify-around relative">
       <h1 className="text-heading-01-normal mt-35">
         Blogs
         <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
@@ -35,12 +32,8 @@ const Blogs = () => {
             ))}
         </div>
         <p className="self-end">
-          Want to read more blogs, navigate to my blogging site by clicking{" "}
-          <a
-            className="text-accent-300"
-            target="_blank"
-            href="https://blogs.ajitsingh.me"
-          >
+          Want to read more blogs, navigate to my blogging site by clicking{' '}
+          <a className="text-accent-300" target="_blank" href="https://blogs.ajitsingh.me">
             here
           </a>
           .

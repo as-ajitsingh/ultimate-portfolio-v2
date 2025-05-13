@@ -1,7 +1,7 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import { FaPlay } from "react-icons/fa";
-import { motion } from "framer-motion";
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import { FaPlay } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Carousel01 = ({ cards }) => {
   const pageLength = 4;
@@ -23,9 +23,7 @@ const Carousel01 = ({ cards }) => {
   useEffect(() => {
     if (!sliderPaused)
       sliderTimerRef.current = setInterval(() => {
-        setCurrentPage((currentPage) =>
-          currentPage == pages.length - 1 ? 0 : currentPage + 1
-        );
+        setCurrentPage((currentPage) => (currentPage == pages.length - 1 ? 0 : currentPage + 1));
       }, sliderDuration);
 
     return () => clearInterval(sliderTimerRef.current);
@@ -36,7 +34,7 @@ const Carousel01 = ({ cards }) => {
       <div className="grid grid-cols-2 gap-6">
         {pages[currentPage].map((Card, i) => (
           <motion.div
-            key={currentPage + "" + i}
+            key={currentPage + '' + i}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
@@ -49,17 +47,13 @@ const Carousel01 = ({ cards }) => {
       <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 items-center">
         <FaPlay
           onClick={() => setSliderPaused((sliderPaused) => !sliderPaused)}
-          className={`w-3 h-3  ${
-            sliderPaused ? "text-primary-100" : "text-accent-300"
-          }`}
+          className={`w-3 h-3  ${sliderPaused ? 'text-primary-100' : 'text-accent-300'}`}
         />
         {pages.map((_, i) => (
           <div
             onClick={() => setCurrentPage(i)}
             key={i}
-            className={`w-3 h-3 rounded-full ${
-              i === currentPage ? "bg-accent-300" : "bg-primary-100"
-            }`}
+            className={`w-3 h-3 rounded-full ${i === currentPage ? 'bg-accent-300' : 'bg-primary-100'}`}
           ></div>
         ))}
       </div>

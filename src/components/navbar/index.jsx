@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import Logo from "../logo/logo";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Logo from '../logo/logo';
 
 const Navbar = ({ websiteTitle, links }) => {
   const [progress, setProgress] = useState(0);
@@ -21,25 +21,23 @@ const Navbar = ({ websiteTitle, links }) => {
       setProgress(getCurrentScrollProgress());
     };
 
-    window.addEventListener("scroll", updateScrollProgress);
-    return () => window.removeEventListener("scroll", updateScrollProgress);
+    window.addEventListener('scroll', updateScrollProgress);
+    return () => window.removeEventListener('scroll', updateScrollProgress);
   }, []);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const id = entry.target.getAttribute("id");
-          const link = document.querySelector(
-            `.nav-link[data-section="${id}"]`
-          );
+          const id = entry.target.getAttribute('id');
+          const link = document.querySelector(`.nav-link[data-section="${id}"]`);
 
           if (entry.isIntersecting) {
-            navLinks.forEach((el) => el.classList.remove("text-primary-500"));
-            link?.classList.add("text-primary-500");
+            navLinks.forEach((el) => el.classList.remove('text-primary-500'));
+            link?.classList.add('text-primary-500');
           }
         });
       },
