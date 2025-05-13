@@ -15,12 +15,12 @@ const AboutMe = () => {
           <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
         </h1>
         <p className="text-primary-100 text-body-01-normal text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus magna
-          nunc vel sagittis quis. Ultrices elit augue cras in id. Iaculis quis
-          orci montes, ultricies pretium non pharetra. Bibendum a hendrerit
-          donec vitae molestie senectus amet.
+          I’m into learning new tech, building cool tools, and pretending I have
+          it all figured out in blog form. And yeah, that chatbot you see below?
+          I built it (mostly to show off). Go ahead and interact with it—but
+          please be nice, it’s still learning.
         </p>
-        <img className='w-180' src="undermaintenance-chatbot.png" />
+        <img className="w-180" src="undermaintenance-chatbot.png" />
       </div>
     </section>
   );

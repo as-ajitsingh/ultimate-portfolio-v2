@@ -15,15 +15,25 @@ export default [
         name: 'Commentinator',
         github:'https://github.com/bored-engineers/commentinator',
         link:'https://bored-engineers.github.io/commentinator/',
-        description: 'Add comments to your static website with ease using Firebase authentication and datastore. It\'s open source and free!'
+        description: 'Easily add comments to your static site with Firebase. Free and open source.'
     },
-    
     {
-        name: 'mongodb-memory-server',
+        name: 'MongoDB In-Memory Server',
         github:'https://github.com/typegoose/mongodb-memory-server',
         link:'https://typegoose.github.io/mongodb-memory-server/',
         opensource: true,
-        description: 'I contributed to a well-known open-source tool for running MongoDB in memory, where I added two small but useful features.'
+        description: 'Contributed two handy features to a popular in-memory MongoDB tool.'
+    },
+    {
+        name: 'Ultimate Portfolio V2',
+        github: 'https://github.com/as-ajitsingh/ultimate-portfolio-v2',
+        link: '#',
+        description: 'A mildly overengineered corner of the internet where I show off what I’ve built and learned. Ignore v1— pretend it never happened.'
+    },
+    {
+        name: 'Ultimate Blogging Site',
+        link: 'https://blogs.ajitsingh.me',
+        description: 'A tech blog powered by a Ghost CMS (locally), Firebase, and a questionable amount of curiosity and sleepless nights.'
     },
     {
         name: 'Nodelex',

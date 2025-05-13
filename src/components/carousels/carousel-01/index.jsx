@@ -5,19 +5,20 @@ import { motion } from "framer-motion";
 
 const Carousel01 = ({ cards }) => {
   const pageLength = 4;
-  const sliderDuration = 5_000;
-
-  const pages = cards.reduce((pages, card, index) => {
-    pages[Math.floor(index / pageLength)] =
-      pages[Math.floor(index / pageLength)] ?? [];
-    pages[Math.floor(index / pageLength)].push(card);
-    return pages;
-  }, new Array(Math.floor(cards.length / pageLength)).fill([]));
+  const sliderDuration = 7_000;
 
   const sliderTimerRef = useRef();
 
   const [currentPage, setCurrentPage] = useState(0);
   const [sliderPaused, setSliderPaused] = useState(false);
+
+  const pages = cards.reduce(
+    (pages, card, index) => {
+      pages[Math.floor(index / pageLength)].push(card);
+      return pages;
+    },
+    new Array(Math.floor(cards.length / pageLength)).fill(null).map(() => [])
+  );
 
   useEffect(() => {
     if (!sliderPaused)
