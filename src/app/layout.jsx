@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar websiteTitle="Portfolio" links={links} />
-        <section className="max-w-75r mx-auto">{children}</section>
+        <section className="max-w-[75rem] mx-auto">{children}</section>
         <section
           id="footer"
           className="h-100 bg-secondary-700 flex flex-row items-center justify-around"

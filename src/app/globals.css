@@ -51,14 +51,10 @@
     font-weight: bold;
     font-size: 1.25rem;
   }
-
-  .max-w-75r {
-    max-width: 75rem;
-  }
 }
 
 html {
-  font-size: 0.9vw;
+  font-size: clamp(14px, 0.8vw, 16px);
   scroll-behavior: smooth;
 }
 
