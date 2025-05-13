@@ -58,7 +58,7 @@ const Navbar = ({ websiteTitle, links }) => {
         <Link href="/">
           <span className="flex items-center space-x-4">
             <Logo />
-            <span className="text-2xl border-primary-500 dark:border-secondary-500 border-l-2 pl-4">
+            <span className="text-2xl border-primary-500 border-l-2 pl-4">
               {websiteTitle}
             </span>
           </span>

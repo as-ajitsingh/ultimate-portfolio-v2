@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         <section id="footer" className="h-100 bg-secondary-700 flex flex-row items-center justify-around">
           <div id="left" className="flex flex-col gap-1">
             <h1 className="flex text-3xl md:text-5xl justify-center md:justify-start">Contact</h1>
-            <span className="block p-1 text-lg text-primary-100 dark:text-secondary-300 font-normal w-72">
+            <span className="block p-1 text-lg text-primary-100 font-normal w-72">
               Feel free to connect with me via any of these mediums.
             </span>
           </div>

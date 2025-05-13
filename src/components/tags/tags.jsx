@@ -4,7 +4,7 @@ const Tag = ({ text, variant }) => {
   return (
     <span
       className={classnames(
-        'py-0.5 px-2.5 mix-blend-multiply dark:mix-blend-normal bg-secondary-700 rounded-md  bg-opacity-80 dark:bg-opacity-60',
+        'py-0.5 px-2.5 mix-blend-multiply  bg-secondary-700 rounded-md  bg-opacity-80',
         { 'text-xs': variant === 'small' }
       )}
     >
