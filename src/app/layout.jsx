@@ -33,8 +33,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased`}>
         <Navbar websiteTitle="Portfolio" links={links} />
-        <section className="max-w-[75rem] mx-auto">{children}</section>
-        <section id="footer" className="h-100 bg-secondary-700 flex flex-row items-center justify-around">
+        <section className="max-w-[75rem] mx-auto p-4">{children}</section>
+        <section id="footer" className="h-100 bg-secondary-700 flex flex-col sm:flex-row items-center justify-evenly sm:justify-around">
           <div id="left" className="flex flex-col gap-1">
             <h1 className="flex text-3xl md:text-5xl justify-center md:justify-start">Contact</h1>
             <span className="block p-1 text-lg text-primary-100 font-normal w-72">

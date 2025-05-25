@@ -21,7 +21,7 @@ const Projects = () => {
         Projects
         <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
       </h1>
-      <div className="flex items-center justify-center">
+      <div className="hidden sm:flex items-center justify-center">
         <Carousel01 cards={projectCards} />
       </div>
     </section>

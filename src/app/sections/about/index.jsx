@@ -6,7 +6,7 @@ const AboutMe = () => {
           <img src="./down-arrow-big.svg" />
         </div>
       </div>
-      <div className="relative z-10 mt-35 flex flex-col items-center gap-20">
+      <div className="relative z-10 mt-35 flex flex-col items-center gap-10 sm:gap-20">
         <h1 className="text-heading-01-normal">
           About Me
           <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>

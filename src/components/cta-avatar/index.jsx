@@ -16,7 +16,7 @@ const CtaAvatar = () => {
           videoRef.current.play();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
 
     if (videoRef.current) observer.observe(videoRef.current);
@@ -32,7 +32,7 @@ const CtaAvatar = () => {
   };
 
   return (
-    <div id="right" onClick={onVideoClick} className="rounded-full w-2/5 border-primary-300 border-4 shadow-lg">
+    <div id="right" onClick={onVideoClick} className="rounded-full w-3/5 sm:w-2/5 border-primary-300 border-4 shadow-lg">
       <video className="rounded-full w-3/2" ref={videoRef} src="cta-avatar.webm" autoPlay muted playsInline />
     </div>
   );

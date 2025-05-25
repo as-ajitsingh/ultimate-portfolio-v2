@@ -3,7 +3,7 @@ import skills from '@/app/data/skills';
 
 const Skills = () => {
   return (
-    <section id="skills" className="h-dvh flex flex-col items-center relative gap-56">
+    <section id="skills" className="min-h-dvh flex flex-col items-center relative gap-20 sm:gap-56 overflow-clip">
       <h1 className="text-heading-01-normal mt-35">
         Skills
         <span className="block w-3/4 border-b-2 border-primary-500 mx-auto mt-5"></span>
