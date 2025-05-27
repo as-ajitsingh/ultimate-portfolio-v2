@@ -7,7 +7,7 @@ const Intro = () => {
       className="h-dvh sm:content-center flex flex-col-reverse gap-16 sm:gap-0 sm:flex-row items-center justify-center sm:justify-between"
     >
       <div id="left" className="flex flex-col">
-        <p className="text-left text-display-02-normal sm:w-[40rem]">
+        <p className="hidden sm:block text-left text-display-02-normal sm:w-[40rem]">
           Hi, My name is Ajit and I am a Software Developer.
         </p>
         <p className="sm:hidden text-heading-02-normal text-center">

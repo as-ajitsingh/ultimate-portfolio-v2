@@ -36,11 +36,11 @@ const Navbar = ({ websiteTitle, links }) => {
       (entries) => {
         entries.forEach((entry) => {
           const id = entry.target.getAttribute('id');
-          const link = document.querySelector(`.nav-link[data-section="${id}"]`);
-
+          const links = document.querySelectorAll(`.nav-link[data-section="${id}"]`);
+          
           if (entry.isIntersecting) {
             navLinks.forEach((el) => el.classList.remove('text-primary-500'));
-            link?.classList.add('text-primary-500');
+            links?.forEach(link => link.classList.add('text-primary-500'));
           }
         });
       },
